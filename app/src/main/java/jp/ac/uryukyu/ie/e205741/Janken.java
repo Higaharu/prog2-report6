@@ -35,10 +35,10 @@ public class Janken {
 	 * @return true：正しい引数 false：誤った引数
 	 */
 	public boolean isParameter(String[] args) {
-
+		System.out.println("*************************************");
 		System.out.println("1:グー, 2:チョキ, 3:パー です。");
 		System.out.println("1,2,3から1つ選んで入力してください。");
-
+		System.out.println("*************************************");
 		// 数字が入力されているかどうか判定
 		try {
 			Scanner scan = new Scanner(System.in);
@@ -52,7 +52,6 @@ public class Janken {
 			System.out.println("1~3の間から選んでください。");
 			return false;
 		}
-
 		return true;
 	}
 
@@ -75,7 +74,7 @@ public class Janken {
 	public void displayDraw() {
 		if (this.man == ROCKS) {
 			System.out.println("私はグーを出しました。");
-			System.out.println("相手はグーを出しました");
+			System.out.println("相手はグーを出しました。");
 		} else if (this.man == SCISSORS) {
 			System.out.println("私はチョキを出しました。");
 			System.out.println("相手はチョキを出しました。");
@@ -137,6 +136,6 @@ public class Janken {
 			System.out.println("相手はチョキを出しました。");
 		}
 
-		System.out.println("あなたの負けです...");
+		System.out.println("あなたの負けです...。");
 	}
 }
