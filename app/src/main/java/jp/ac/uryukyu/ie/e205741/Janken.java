@@ -60,6 +60,7 @@ public class Janken {
 	 * 
 	 * @return true：あいこ false：あいこではない
 	 */
+
 	public boolean isDraw() {
 		if (this.man == this.machine) {
 			return true;
@@ -67,24 +68,26 @@ public class Janken {
 			return false;
 		}
 	}
-
+	
 	/**
 	 * あいこの時、何の手を出したかを表示するメソッド
 	 */
+
 	public void displayDraw() {
-		if (this.man == ROCKS) {
+		if (this.man == ROCKS && this.machine == ROCKS) {
 			System.out.println("私はグーを出しました。");
 			System.out.println("相手はグーを出しました。");
-		} else if (this.man == SCISSORS) {
+		} else if (this.man == SCISSORS && this.machine == SCISSORS) {
 			System.out.println("私はチョキを出しました。");
 			System.out.println("相手はチョキを出しました。");
-		} else {
+		} else if(this.man == PAPER && this.machine == PAPER){
 			System.out.println("私はパーを出しました。");
 			System.out.println("相手はパーを出しました。");
 		}
-
+		
 		System.out.println("あいこでした。");
 	}
+
 
 	/**
 	 * じゃんけんの勝敗を判定するメソッド
@@ -107,13 +110,13 @@ public class Janken {
 	 * 勝った時、何の手を出したかを表示するメソッド
 	 */
 	public void displayWin() {
-		if (this.man == ROCKS) {
+		if (this.man == ROCKS ) {
 			System.out.println("私はグーを出しました。");
 			System.out.println("相手はチョキを出しました。");
-		} else if (this.man == SCISSORS) {
+		} else if (this.man == SCISSORS ) {
 			System.out.println("私はチョキを出しました。");
 			System.out.println("相手はパーを出しました。");
-		} else {
+		} else if (this.man == PAPER ){
 			System.out.println("私はパーを出しました。");
 			System.out.println("相手はグーを出しました。");
 		}
